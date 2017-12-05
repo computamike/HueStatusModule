@@ -1,7 +1,7 @@
 # HueStatusModule
 
-[![Build Status](https://travis-ci.org/APCOvernight/huestatusmodule.svg?branch=master)](https://travis-ci.org/APCOvernight/huestatusmodule) [![Coverage Status](https://coveralls.io/repos/github/APCOvernight/huestatusmodule/badge.svg?branch=master)](https://coveralls.io/github/APCOvernight/huestatusmodule?branch=master) [![Maintainability](	https://img.shields.io/codeclimate/maintainability/APCOvernight/huestatusmodule.svg)](https://codeclimate.com/github/APCOvernight/huestatusmodule/maintainability) 
-[![Dependencies](https://img.shields.io/david/APCOvernight/huestatusmodule.svg)](https://david-dm.org/APCOvernight/huestatusmodule) [![Greenkeeper badge](https://badges.greenkeeper.io/APCOvernight/huestatusmodule.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/APCOvernight/HueStatusModule.git.svg?branch=master)](https://travis-ci.org/APCOvernight/HueStatusModule.git) [![Coverage Status](https://coveralls.io/repos/github/APCOvernight/HueStatusModule.git/badge.svg?branch=master)](https://coveralls.io/github/APCOvernight/HueStatusModule.git?branch=master) [![Maintainability](	https://img.shields.io/codeclimate/maintainability/APCOvernight/HueStatusModule.git.svg)](https://codeclimate.com/github/APCOvernight/HueStatusModule.git/maintainability) 
+[![Dependencies](https://img.shields.io/david/APCOvernight/HueStatusModule.git.svg)](https://david-dm.org/APCOvernight/HueStatusModule.git) [![Greenkeeper badge](https://badges.greenkeeper.io/APCOvernight/HueStatusModule.git.svg)](https://greenkeeper.io/)
 
 Template [HueStatus](https://github.com/APCOvernight/huestatus/) module
 
