@@ -12,6 +12,9 @@ Template [HueStatus](https://github.com/APCOvernight/huestatus/) module
 - Run `npm install` to install dependencies
 - Make sure [HueStatus](https://github.com/APCOvernight/huestatus/) is installed globally `npm install -g huestatus`
 
+## Naming
+Each HueStatus module needs a unique name.  Confirm that your desired name is available on [npm](https://www.npmjs.com). Configuration is also driven by the module name, 
+
 ## Building your module
 
 The entry point for this module is index.js. It must export a class that extends the [BaseModule class from HueStatus](https://github.com/APCOvernight/huestatus/blob/master/src/Module.js).
@@ -37,13 +40,18 @@ The BaseModule change method is used to update the status (by emitting an event 
 if (someConditionIsMet) {
   await this.change('ok', 'everything is ok')
 }
+
 ```
+
+
+## Configuration
+Configuration for modules is stored in a file called ```.huerc``` which should ideally be located in your home directory.  The configuration determines which providers are loaded (based on the name property).  The whole named configuration section will be passed into your module through the constructor.
 
 ## Testing
 
-The default codestyle in this repository is APC-style, run `npm run lint` to lint the all js files in your project.
+The default codestyle in this repository is [APC-style](https://github.com/APCOvernight/apc-style), run `npm run lint` to lint all js files in your project.
 
-Unit tests are included in test, run these with `npm run test`. Test coverage will be calculated by [nyc](https://github.com/istanbuljs/nyc).
+Unit tests based on [mocha](https://mochajs.org/) are included in the test folder. Run these with `npm run test` command. Test coverage is calculated using [nyc](https://github.com/istanbuljs/nyc).
 
 [Stryker](https://stryker-mutator.github.io/) mutation tests can be run with `npm run stryker`
 
@@ -55,7 +63,7 @@ Run `npm link` ([docs](https://docs.npmjs.com/cli/link)) from the project direct
 
 A .travis.yml file is included for simple [Continuous Integration in Travis](https://travis-ci.org). You will need to add your repo to travis to set up automated builds.
 
-The npm coverage script is set up to send coverage to [Coveralls](https://coveralls.io/) and [Code Climate](https://codeclimate.com/) upon build. You will need to create an account and add you repositories there for this to work.
+The npm coverage script is set up to send coverage to [Coveralls](https://coveralls.io/) and [Code Climate](https://codeclimate.com/) upon build. You will need to create an account and add your repositories there for this to work.
 
 ## Publishing
 
@@ -64,3 +72,4 @@ Make sure to write your own README, and make sure all references in package.json
 You should include a `.huerc-example` file with an example of all the possible module config variables.
 
 When you are ready, publish to NPM with `npm publish`.
+
