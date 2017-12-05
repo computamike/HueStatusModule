@@ -13,7 +13,7 @@ Template [HueStatus](https://github.com/APCOvernight/huestatus/) module
 - Make sure [HueStatus](https://github.com/APCOvernight/huestatus/) is installed globally `npm install -g huestatus`
 
 ## Naming
-Each HueStatus module needs a unique name.  Confirm that your desired name is available on [npm](https://www.npmjs.com). Configuration is also driven by the module name, 
+Each HueStatus module needs a unique name.  Confirm that your desired name is available on [npm](https://www.npmjs.com). Configuration is also driven by the module name.
 
 ## Building your module
 
@@ -21,9 +21,9 @@ The entry point for this module is index.js. It must export a class that extends
 
 Your module class must have a start method, this is called when the module is loaded and HueStatus is ready to start updating.
 
-Your module class can optionally have a generateInstanceName method, that generates a unique instanceName for use in debugging. If this method is omitted a uuid will be generated instead.
+Your module class can optionally have a `generateInstanceName` method, that generates a unique instanceName for use in debugging. If this method is omitted a uuid will be generated instead.
 
-The BaseModule constructor adds the module config object to `this.config`. It also creates an event emitter at `this.emitter` but you shouldn't have to access this directly. You should use the change method (see below).
+The BaseModule constructor adds the module config object to `this.config`. It also creates an event emitter at `this.emitter` but you shouldn't have to access this directly. You should use the change method (see below).  Configuration is read from the `.heurc` file, typically located in your home directory.
 
 ### this.change(status, message) ⇒ <code>async function</code>
 The BaseModule change method is used to update the status (by emitting an event to the huestatus module).
@@ -42,10 +42,6 @@ if (someConditionIsMet) {
 }
 
 ```
-
-
-## Configuration
-Configuration for modules is stored in a file called ```.huerc``` which should ideally be located in your home directory.  The configuration determines which providers are loaded (based on the name property).  The whole named configuration section will be passed into your module through the constructor.
 
 ## Testing
 
