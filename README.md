@@ -12,14 +12,11 @@ Template [HueStatus](https://github.com/APCOvernight/huestatus/) module
 - Run `npm install` to install dependencies
 - Make sure [HueStatus](https://github.com/APCOvernight/huestatus/) is installed globally `npm install -g huestatus`
 
-## Naming
-Each HueStatus module needs a unique name.  Confirm that your desired name is available on [npm](https://www.npmjs.com). Configuration is also driven by the module name.
-
 ## Building your module
 
 The entry point for this module is index.js. It must export a class that extends the [BaseModule class from HueStatus](https://github.com/APCOvernight/huestatus/blob/master/src/Module.js).
 
-Your module class must have a start method, this is called when the module is loaded and HueStatus is ready to start updating.
+Your module class must have a `start` method. This is called when the module is loaded and HueStatus is ready to start updating.
 
 Your module class can optionally have a `generateInstanceName` method, that generates a unique instanceName for use in debugging. If this method is omitted a uuid will be generated instead.
 
@@ -45,9 +42,9 @@ if (someConditionIsMet) {
 
 ## Testing
 
-The default codestyle in this repository is [APC-style](https://github.com/APCOvernight/apc-style), run `npm run lint` to lint all js files in your project.
+The default codestyle in this repository is [APC-style](https://github.com/APCOvernight/apc-style).  Run `npm run lint` to lint all js files in your project.
 
-Unit tests based on [mocha](https://mochajs.org/) are included in the test folder. Run these with `npm run test` command. Test coverage is calculated using [nyc](https://github.com/istanbuljs/nyc).
+Unit tests based on [mocha](https://mochajs.org/) are included in the `test` folder. Run these with `npm run test` command. Test coverage is calculated using [nyc](https://github.com/istanbuljs/nyc).
 
 [Stryker](https://stryker-mutator.github.io/) mutation tests can be run with `npm run stryker`
 
@@ -63,7 +60,7 @@ The npm coverage script is set up to send coverage to [Coveralls](https://covera
 
 ## Publishing
 
-Make sure to write your own README, and make sure all references in package.json are to your new module name. 
+Make sure to write your own `README.md`, and to replace all references in `package.json` to your new module name. 
 
 You should include a `.huerc-example` file with an example of all the possible module config variables.
 
